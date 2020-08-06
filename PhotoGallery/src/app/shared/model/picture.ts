@@ -5,5 +5,5 @@ export interface IPicture {
   like: number;
   imgPath: string;
   description: string;
-  status: boolean;
+  isSoldIt: boolean;
 }

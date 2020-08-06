@@ -1,0 +1,14 @@
+img{
+  width: 300px;
+  height: 300px;
+}
+
+.sold-it{
+  color: green;
+  font-weight: bold;
+}
+
+.not-sold{
+  color: red;
+  font-weight: bold;
+}
