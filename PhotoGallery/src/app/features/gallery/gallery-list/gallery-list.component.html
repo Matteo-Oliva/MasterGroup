@@ -1,0 +1,11 @@
+<h1>Picture List</h1>
+
+<div *ngFor="let picture of pictures">
+
+  <h2>{{ picture.name }}</h2>
+  <h3>{{ picture.author }}</h3>
+  <img [src]="picture.imgPath" [alt]="picture.name" [title]="picture.name"/>
+  <p>{{ picture.description }}</p>
+  <p>{{ picture.status }}</p><hr>
+
+</div>
