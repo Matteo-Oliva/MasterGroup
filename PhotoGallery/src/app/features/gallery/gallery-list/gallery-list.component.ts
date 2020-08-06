@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IPicture } from './../../../shared/model/picture';
-import { PICTURES } from './../../../shared/model/mock-data/mock-pictures';
+import { PictureService } from './../../../shared/services/picture.service';
 
 
 @Component({
@@ -10,11 +10,17 @@ import { PICTURES } from './../../../shared/model/mock-data/mock-pictures';
 })
 export class GalleryListComponent implements OnInit {
 
-  pictures = PICTURES;
+  pictures: IPicture[];
 
-  constructor() { }
+  constructor(private pictureService: PictureService) { }
 
   ngOnInit(): void {
+    this.getPictures();
+  }
+
+  getPictures(): void {
+    this.pictureService.getPictures()
+      .subscribe(pictures => this.pictures = pictures);
   }
 
 }
