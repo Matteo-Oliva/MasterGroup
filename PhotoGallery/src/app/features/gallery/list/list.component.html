@@ -1,0 +1,24 @@
+<button class="all">All</button>
+<button class="all">Venduti</button>
+<button class="all">Non venduti</button>
+
+<div *ngFor="let picture of pictures">
+    <ul class="pictures">
+        <li class="img">
+            <img src={{picture.imgPath}} title={{picture.description}} [alt]="picture.description">
+        </li>
+        <li>
+            Nome:{{picture.name}}
+        </li>
+        <li>
+            Autore:{{picture.author}}
+        </li>
+        <li [ngClass]="soldedClass(picture)">
+            Stato:{{isSold(picture)}}
+        </li>
+        <li>
+            Like:{{picture.like}}
+        </li>
+    </ul>
+</div>
+
