@@ -1,15 +1,14 @@
 <h1>Picture List</h1>
 
-<button type="button" (click)="filterSoldIt(filterSold.ALL)">ALL</button>
-<button type="button" (click)="filterSoldIt(filterSold.SOLDIT)">SOLD-IT</button>
-<button type="button" (click)="filterSoldIt(filterSold.NOTSOLD)">NOT-SOLD</button>
+<section>
+  <div class="button-row">
+    <button mat-raised-button (click)="filterSoldIt(filterSold.ALL)">All</button>
+    <button mat-raised-button color="primary" (click)="filterSoldIt(filterSold.SOLDIT)">Sold-It</button>
+    <button mat-raised-button color="accent" (click)="filterSoldIt(filterSold.NOTSOLD)">Not-Sold</button>
+  </div>
+</section>
 
-<div *ngFor="let picture of pictures">
-
-  <h2>Nome Dipinto: {{ picture.name }}</h2>
-  <h3>Artista: {{ picture.author }}</h3>
-  <img [src]="picture.imgPath" [alt]="picture.name" [title]="picture.name"/>
-  <p>{{ picture.description }}</p>
-  <p [ngClass]="isSoldIt(picture)">{{ soldItText(picture) }}</p><hr>
-
+<div fxLayout="row wrap" fxLayoutAlign="space-around start">
+  <app-picture-card *ngFor="let picture of pictures" [picture]="picture"></app-picture-card>
 </div>
+

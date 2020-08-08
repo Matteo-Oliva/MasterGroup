@@ -1,14 +1,9 @@
-img{
-  width: 300px;
-  height: 300px;
+section {
+  display: table;
 }
 
-.sold-it{
-  color: green;
-  font-weight: bold;
-}
-
-.not-sold{
-  color: red;
-  font-weight: bold;
+.button-row {
+  display: table-cell;
+  width: 490px;
+  margin: 8px;
 }

@@ -24,16 +24,6 @@ export class GalleryListComponent implements OnInit {
       .subscribe(pictures => this.pictures = pictures);
   }
 
-  soldItText(picture: IPicture): string {
-    return picture.isSoldIt ? 'Sold-It' : 'Not-Sold';
-  }
-
-  isSoldIt(picture: IPicture): any {
-    return {
-      'sold-it': picture.isSoldIt,
-      'not-sold': !picture.isSoldIt
-    };
-  }
 
   filterSoldIt(filterSold: FilterSold = FilterSold.ALL): void {
     if (filterSold === FilterSold.ALL) {

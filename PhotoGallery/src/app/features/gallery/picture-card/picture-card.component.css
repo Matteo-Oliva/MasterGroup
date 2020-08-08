@@ -1,0 +1,22 @@
+.picture-card {
+  max-width: 400px;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+}
+
+.sold-it{
+  border: 1px dashed green;
+  color: green;
+  font-weight: bold;
+  padding: 2px;
+}
+
+.not-sold{
+  border: 1px dashed red;
+  color: red;
+  font-weight: bold;
+  padding: 2px;
+}
