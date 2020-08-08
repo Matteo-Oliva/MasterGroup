@@ -1,0 +1,33 @@
+<mat-card class="gallery-card">
+  <mat-card-header>
+    <div mat-card-avatar class="gallery-header-image"></div>
+    <mat-card-title>
+      <h2>Nome:{{picture.name}}</h2>
+    </mat-card-title>
+  </mat-card-header>
+  <img [src]="picture.imgPath" title={{picture.description}} alt="{{picture.description}}" mat-card-image>
+  <mat-card-subtitle>
+    <h3>Autore:{{picture.author}}</h3>
+  </mat-card-subtitle>
+  <mat-card-content>
+    <div class="container">
+      <p [ngClass]="soldedClass(picture)">
+        {{isSold(picture)}}
+      </p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <!-- <app-like></app-like> -->
+    <div class="button-container">
+      <button (click)="likeButton()" mat-mini-fab color="primary">
+        <mat-icon>thumb_up_alt</mat-icon>
+      </button>
+      <button (click)="dislikeButton()" mat-mini-fab color="warn">
+        <mat-icon>thumb_down_alt</mat-icon>
+      </button>
+      <p>
+        <span matBadge="{{picture.like}}" matBadgeOverlap="false">Likes:</span>
+      </p>
+    </div>
+  </mat-card-actions>
+</mat-card>
