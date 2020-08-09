@@ -1,0 +1,4 @@
+<h1>Most Voted</h1>
+<div fxLayout="row wrap" fxLayoutAlign="space-around start">
+  <app-picture-card *ngFor="let picture of pictures$ | async" [picture]='picture'></app-picture-card>
+</div>
