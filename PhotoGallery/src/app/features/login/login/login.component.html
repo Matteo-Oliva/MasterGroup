@@ -1,0 +1,28 @@
+<div class="parent">
+    <div class="form" [formGroup]="form">
+        <h1>Login</h1>
+        <div class="container">
+            <mat-form-field appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput placeholder="name" formControlName="name" [(ngModel)]="username" required minlength>
+                <mat-error *ngIf="form.get('name').invalid ">{{nameErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+
+            <div class="container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="password" formControlName="password" [(ngModel)]="password" required
+                        minlength>
+                    <mat-error *ngIf="form.get('name').invalid ">{{passwordErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <div class="container-login-register">
+                    
+                        <mat-label><button mat-raised-button (click)="login()">Connect</button></mat-label>
+                        <mat-label><button mat-raised-button routerLink="/register">Register</button></mat-label>
+                    
+                </div>
+                <div *ngIf="invalidLogin">
+                    <span matBadge>Invalid Login</span>
+                </div>
+            </div>

@@ -1,0 +1,15 @@
+.registration-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  
+  .ng-valid[required], .ng-valid.required  {
+    border-right: solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-right:  solid #a94442; /* red */
+  }

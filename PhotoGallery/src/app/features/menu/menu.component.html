@@ -5,6 +5,11 @@
   <button mat-menu-item routerLink="/dashboard">Dashboard</button>
   <button mat-menu-item routerLink="/client">Clients</button>
   <button mat-menu-item routerLink="/orders">Orders</button>
+  <button mat-menu-item class="login" routerLink="/login" *ngIf="!(isLogged$ | async); else logged">Login</button>
+  <ng-template #logged>
+    <div class="welcome">Welcome, {{authService.MOCKED_USERNAME }}</div>
+    <button mat-menu-item (click)="authService.logout()" >Logout</button>
+</ng-template>
 </mat-menu>
 
 

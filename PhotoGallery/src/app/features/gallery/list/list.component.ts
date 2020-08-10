@@ -1,9 +1,8 @@
 import { PictureService } from './../../shared/services/picture.service';
 import { IPicture } from './../../../shared/model/picture';
-
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { Observable, from, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { FilterSelection } from './../../../shared/model/enum/filter.enum'
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/internal/operators';
 import { MatInput } from '@angular/material/input';
@@ -54,10 +53,7 @@ export class ListComponent implements OnInit {
 
    }
    
-   getAllPicture(){
-      this.pictures$ = this.pictureService.getPictures();debugger;
-   }
-
+   
 
 
 
