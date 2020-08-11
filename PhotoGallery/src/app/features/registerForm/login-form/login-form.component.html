@@ -1,0 +1,38 @@
+<p>login-form works!</p>
+
+<div>
+
+    <form [formGroup]="loginForm" class="registration-form" (ngSubmit)="loginForm.valid && loginSubmit()" novalidate>
+        <div>Login</div>
+
+        <mat-form-field>
+            <input id="username" matInput placeholder="username" formControlName="username" [(ngModel)]="user.username">
+            <mat-error *ngIf="username.invalid && (username.dirty || username.touched)">
+                <mat-error *ngIf="username.errors.required">Username is required</mat-error>
+                <mat-error *ngIf="username.hasError('username')">Invalid Username</mat-error>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input id="password" matInput formControlName="password" placeholder="password" [(ngModel)]="user.password"
+                [type]=" hide ? 'password' : 'text' ">
+            
+                
+                <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
+                    <mat-error *ngIf="password.errors.required">Password is required</mat-error>
+                    <mat-error *ngIf="password.errors.minlength">Invalid Password</mat-error>
+                    <mat-hint> Must have 8 characters</mat-hint>
+                </mat-error>
+
+           
+
+        </mat-form-field>
+        <mat-icon matSuffix (click)="hide = !hide">
+            {{hide ? 'visibility' : 'visibility_off'}}
+        </mat-icon>
+
+        <button mat-button color="primary" type="submit"  [disabled]="!loginForm.valid">Login</button> &nbsp;
+        <button mat-button routerLink="/register">Register</button>
+
+    </form>
+</div>

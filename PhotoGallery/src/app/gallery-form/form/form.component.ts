@@ -1,9 +1,8 @@
-import { PictureService } from './../../features/shared/services/picture.service';
 import { User } from './../../shared/service/user.model';
 import { Component, OnInit } from '@angular/core';
-import { Validators, NgForm, Form } from '@angular/forms';
+import { Validators, NgForm } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
-import { UserService } from 'src/app/shared/service/user.service';
+
 
 @Component({
   selector: 'app-form',
@@ -20,12 +19,12 @@ export class FormComponent implements OnInit {
     surname: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
     address: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
     email: ['', [Validators.required, Validators.email, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9-.]+\\.[a-z]{2,}$')]],
-    password: ['', [Validators.required, Validators.minLength(8)]]
+    password: ['', [Validators.required, Validators.minLength(8), ]]
 
   });
 
 
-  constructor(private formBuilder: FormBuilder, private userService: UserService) { }
+  constructor(private formBuilder: FormBuilder, ) { }
 
   ngOnInit(): void {
     this.resetForm();
@@ -58,14 +57,14 @@ export class FormComponent implements OnInit {
 
 
 
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.userService.registerUser({ name } as User)
-      .subscribe(user => {
-        this.users.push(user);
-      });
-  }
+  // add(name: string): void {
+  //   name = name.trim();
+  //   if (!name) { return; }
+  //   this.userService.registerUser({ name } as User)
+  //     .subscribe(user => {
+  //       this.users.push(user);
+  //     });
+  // }
 
   reset() {
     this.form.setValue({

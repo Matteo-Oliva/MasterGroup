@@ -10,7 +10,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   @Input() picture: IPicture;
-
+  clicked = false;
+  clicked2 = false;
 
 
   constructor() { }

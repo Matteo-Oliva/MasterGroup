@@ -1,0 +1,23 @@
+.registration-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  
+  .ng-valid[required], .ng-valid.required  {
+    border-right: solid #42A948; 
+  }
+  
+  .ng-invalid:not(form)  {
+    border-right:  solid #a94442; 
+  }
+
+  mat-icon {
+      
+   display: flex;
+   margin-left: 100px;    
+      
+
+  }

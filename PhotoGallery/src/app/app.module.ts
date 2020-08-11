@@ -1,3 +1,4 @@
+import { FormComponent } from './features/registerForm/register-form/form.component';
 import { UserService } from './shared/service/user.service';
 import { MaterialModule } from './shared/material/material.module';
 import { InMemoryDataService } from './features/shared/services/in-memory-data.service';
@@ -16,10 +17,11 @@ import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { MenuComponent } from './features/menu/menu.component';
 import { PictureSearchComponent } from './features/picture-search/picture-search.component';
 import { LikeComponent } from './features/gallery/like/like.component';
-import { FormComponent } from './gallery-form/form/form.component'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './features/login/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { LoginFormComponent } from './features/registerForm/login-form/login-form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +32,10 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     PictureSearchComponent,
     LikeComponent,
-    FormComponent,    
-    LoginComponent
-    
+    LoginComponent,
+    FormComponent,
+    LoginFormComponent
+
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,11 @@ import { FormsModule } from '@angular/forms';
     ),
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+
+
+
+
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
