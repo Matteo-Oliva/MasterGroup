@@ -8,7 +8,7 @@ export const PICTURES: IPicture [] = [
    like:4,
    imgPath:"https://cdn.pixabay.com/photo/2018/05/10/22/37/the-framework-3388998_960_720.jpg",
    description:"La bellezza nel mondo",
-   status:false
+   isSold:false
 },
 {
     id:2,
@@ -17,7 +17,7 @@ export const PICTURES: IPicture [] = [
     like:2,
     imgPath:"https://cdn.pixabay.com/photo/2018/05/10/22/37/the-framework-3388998_960_720.jpg",
     description:"La morte in natura",
-    status:true
+    isSold:true
  },
  {
     id:3,
@@ -26,7 +26,7 @@ export const PICTURES: IPicture [] = [
     like:6,
     imgPath:"https://cdn.pixabay.com/photo/2018/05/10/22/37/the-framework-3388998_960_720.jpg",
     description:"Uno squarcio",
-    status:false
+    isSold:false
  },
  {
     id:4,
@@ -35,7 +35,7 @@ export const PICTURES: IPicture [] = [
     like:6,
     imgPath:"https://cdn.pixabay.com/photo/2018/05/10/22/37/the-framework-3388998_960_720.jpg",
     description:"Stati umani",
-    status:true
+    isSold:true
  },
  {
     id:5,
@@ -44,7 +44,7 @@ export const PICTURES: IPicture [] = [
     like:1,
     imgPath:"https://cdn.pixabay.com/photo/2018/05/10/22/37/the-framework-3388998_960_720.jpg",
     description:"Cose che capitano",
-    status:true
+    isSold:true
  },
  {
     id:6,
@@ -53,7 +53,7 @@ export const PICTURES: IPicture [] = [
     like:10,
     imgPath:"https://cdn.pixabay.com/photo/2018/05/10/22/37/the-framework-3388998_960_720.jpg",
     description:"Bere responsabilmente",
-    status:false
+    isSold:false
  },
  {
     id:7,
@@ -62,7 +62,7 @@ export const PICTURES: IPicture [] = [
     like:5,
     imgPath:"https://cdn.pixabay.com/photo/2018/05/10/22/37/the-framework-3388998_960_720.jpg",
     description:"Bere molto responsabilmente",
-    status:false
+    isSold:false
  },
  {
     id:8,
@@ -71,7 +71,7 @@ export const PICTURES: IPicture [] = [
     like:5,
     imgPath:"https://cdn.pixabay.com/photo/2018/05/10/22/37/the-framework-3388998_960_720.jpg",
     description:"Unione tra corpi",
-    status:true
+    isSold:true
  },
  {
     id:9,
@@ -80,7 +80,7 @@ export const PICTURES: IPicture [] = [
     like:8,
     imgPath:"https://cdn.pixabay.com/photo/2018/05/10/22/37/the-framework-3388998_960_720.jpg",
     description:"Ogni tanto capita",
-    status:true
+    isSold:true
  },
  {
     id:10,
@@ -89,6 +89,6 @@ export const PICTURES: IPicture [] = [
     like:10,
     imgPath:"https://cdn.pixabay.com/photo/2018/05/10/22/37/the-framework-3388998_960_720.jpg",
     description:"Le cose belle della vita",
-    status:false
+    isSold:false
  }
 ]

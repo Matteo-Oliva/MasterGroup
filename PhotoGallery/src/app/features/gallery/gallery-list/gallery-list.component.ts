@@ -25,4 +25,15 @@ export class GalleryListComponent implements OnInit {
    .subscribe(pictures => this.pictures = pictures);
   }
 
+  getSold():void{
+    this.pictures = this.pictures.filter(index => index.isSold === true);
+    this.pictureService.getPictures().subscribe();
+  }
+
+  getNotSold():void{
+    this.pictures = this.pictures.filter(index => index.isSold === false);
+    this.pictureService.getPictures().subscribe();
+  }
+
+
 }
