@@ -12,7 +12,7 @@ export class PictureService {
 
   pictures = PICTURES;
 
-  private picturesUrl = 'api/heroes';
+  private picturesUrl = 'api/pictures';
 
   constructor(private http: HttpClient) { }
 

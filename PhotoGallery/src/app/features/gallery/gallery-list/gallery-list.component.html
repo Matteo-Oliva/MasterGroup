@@ -1,6 +1,7 @@
 <div>
-    <button (click)="getSold()"></button>
-    <button (click)="getNotSold()"></button>
+    <button (click)="getSold()">Sold</button>
+    <button (click)="getNotSold()">Not Sold</button>
+    <button (click)="getPictures()">All</button>
 </div>
 <div *ngFor = "let picture of pictures">
 <h1>{{picture.name}}</h1>
