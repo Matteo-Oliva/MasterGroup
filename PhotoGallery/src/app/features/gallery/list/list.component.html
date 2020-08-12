@@ -1,10 +1,17 @@
 <div>
-<input (keyup)="pictureSearch($event)" class="search" placeholder="Search Here"><br>
+    <input (keyup)="pictureSearch($event)" class="search" placeholder="Search Here"><br>
 </div>
-<button >All</button>
-<button >Sold</button>
-<button >Notsold</button>
+
+<mat-form-field appearance="fill">
+    <mat-label>Stato Gallery</mat-label>
+    <mat-select (selectionChange)="onStatusChanged($event)">
+        <mat-option *ngFor="let status of galleryStatus | keyvalue" [value]="status.key">
+            {{status.value}}
+        </mat-option>
+    </mat-select>
+</mat-form-field> 
+
 
 <div fxLayout="row wrap" fxLayoutAlign="space-around start">
- <app-card class="list" *ngFor="let picture of (pictures$ |async )" [picture]="picture"></app-card>
+    <app-card class="list" *ngFor="let picture of pictures" [picture]="picture"></app-card>
 </div>

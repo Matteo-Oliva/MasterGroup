@@ -26,7 +26,7 @@ export class CardComponent implements OnInit {
 
   soldedClass(picture: IPicture): any {
     return {
-      solded: picture.status,
+      'solded': picture.status,
       'non-venduto': !picture.status
     };
   }

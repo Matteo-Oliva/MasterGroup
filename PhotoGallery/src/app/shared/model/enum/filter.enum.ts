@@ -1,5 +1,5 @@
-export enum FilterSelection{
-    All,
-    Solded,
-    Available
+export enum GalleryStatus{
+    "ALL" = "Tutti",
+    "SOLD" = "Venduti",
+    "NOTSOLD" = "Non Venduti"
 }
