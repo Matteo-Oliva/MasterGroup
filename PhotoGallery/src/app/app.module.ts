@@ -1,6 +1,6 @@
+import { MaterialModule } from './shared/libraries/material/material.module';
 import { DashboardComponent } from './features/gallery/dashboard/dashboard.component';
 import { LoginComponent } from './features/login/login/login.component';
-import { FormComponent } from './features/login/form/form.component';
 import { GalleryListComponent } from './features/gallery/gallery-list/gallery-list.component';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,7 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './shared/services/in-memory-data.service';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { PictureCardComponent } from './features/gallery/picture-card/picture-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     GalleryListComponent,
     DashboardComponent,
     LoginComponent,
-    FormComponent,
+    PictureCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false },
     ),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,12 @@
+<mat-card class="picture-card">
+    <mat-card-header>
+        <mat-card-title>{{picture.name}}</mat-card-title>
+        <mat-card-subtitle>{{picture.author}}</mat-card-subtitle>
+    </mat-card-header> 
+    <img mat-card-image src="{{picture.imgPath}}" alt="{{picture.name}}" title="{{picture.name}}">
+    <mat-card-content>
+        <p>{{picture.description}}</p>
+        <p>Like: {{picture.like}}</p>
+        <span [ngClass]="isSold(picture)">{{ soldText(picture) }}</span>
+    </mat-card-content>    
+</mat-card>

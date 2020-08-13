@@ -3,11 +3,6 @@
     <button (click)="getNotSold()">Not Sold</button>
     <button (click)="getPictures()">All</button>
 </div>
-<div *ngFor = "let picture of pictures">
-<h1>{{picture.name}}</h1>
-<h2>{{picture.author}}</h2>
-<img [src]="picture.imgPath" alt={{picture.description}} title={{picture.name}}>
-<p>{{picture.description}}</p>
-<p>{{picture.status}}</p>
-<hr>
+<div fxLayout="row wrap" fxLayoutAlign="space-around start">
+<app-picture-card *ngFor = "let picture of pictures" [picture]="picture"></app-picture-card>
 </div>

@@ -1,1 +1,4 @@
-<p>dashboard works!</p>
+<h1>I più votati </h1>
+<div fxLayout="row wrap" fxLayoutAlign="space-around start">
+  <app-picture-card *ngFor="let picture of pictures" [picture]='picture'></app-picture-card>
+</div>

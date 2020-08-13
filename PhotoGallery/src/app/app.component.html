@@ -1,1 +1,6 @@
-<app-gallery-list></app-gallery-list>
+<mat-toolbar>
+    <span routerLink='/dashboard'>Dashboard</span>
+    <a *ngIf="isLogged$ | async" routerLink='/animal'>Animal List</a>
+    <a *ngIf="!(isLogged$ | async); else logOut" class="login" routerLink='/login'>Login</a>
+</mat-toolbar>
+<router-outlet></router-outlet>

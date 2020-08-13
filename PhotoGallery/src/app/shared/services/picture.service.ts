@@ -2,8 +2,9 @@ import { PICTURES } from './../model/mock-data/mock-pictures';
 import { IPicture } from './../model/picture';
 import { Injectable } from '@angular/core';
 import { Observable, of, pipe, } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { filter,map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { sortAscendingPriority } from '@angular/flex-layout';
 
 @Injectable({
   providedIn: 'root'
@@ -34,5 +35,11 @@ export class PictureService {
     );
   }
 
+  getMostVoted(number:number): Observable<IPicture> {
+    return this.http.get<IPicture>(this.picturesUrl)
+    .pipe(
+      map( pictures => pictures.sort((a, b) => b.like - a.like).slice(0,number))
+    );
+  }
+  }
 
-}
