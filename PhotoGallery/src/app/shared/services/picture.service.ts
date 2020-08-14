@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
 import { Observable, of, pipe, } from 'rxjs';
 import { filter,map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { sortAscendingPriority } from '@angular/flex-layout';
 
 @Injectable({
   providedIn: 'root'

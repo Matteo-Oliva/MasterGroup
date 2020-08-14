@@ -1,6 +1,10 @@
 <mat-toolbar>
-    <span routerLink='/dashboard'>Dashboard</span>
-    <a *ngIf="isLogged$ | async" routerLink='/animal'>Animal List</a>
-    <a *ngIf="!(isLogged$ | async); else logOut" class="login" routerLink='/login'>Login</a>
+    <a routerLink='/dashboard'>Dashboard</a>
+    <a *ngIf="isLogged$ | async" routerLink='/gallery'>Gallery</a>
+    <a *ngIf="!(isLogged$ | async); else logOut" routerLink='/login' >Login</a>
 </mat-toolbar>
 <router-outlet></router-outlet>
+
+<ng-template #logOut> 
+    <button (click)="validationService.logOut()">Logout</button>
+</ng-template>
