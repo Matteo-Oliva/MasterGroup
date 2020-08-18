@@ -1,0 +1,27 @@
+<div id="login-container">
+  <h1>Login</h1>
+  <form class="login-form" [formGroup]="loginForm">
+
+    <div fxLayout="column">
+      <mat-form-field class="form-element">
+        <mat-label>Username</mat-label>
+        <input type="text" formControlName="username" [(ngModel)]="username" id="username" name="username" placeholder="Username" required minlength matInput>
+      </mat-form-field>
+
+      <mat-form-field class="form-element">
+        <mat-label>Password</mat-label>
+        <input type="password" formControlName="password" [(ngModel)]="password" id="password" name="password" placeholder="Password" required minlength matInput>
+      </mat-form-field>
+
+      <div *ngIf="invalidLogin" id="error">
+        <span>Username or password are inavlid</span>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="end end">
+        <button (click)="login()" color="primary" id="btn-login" mat-raised-button>Login</button>
+        <button (click)="cancel()" color="warn" mat-raised-button>Cancel</button>
+      </div>
+
+    </div>
+  </form>
+</div>

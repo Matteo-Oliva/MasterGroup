@@ -1,8 +1,17 @@
 <mat-nav-list>
   <a mat-list-item routerLink='dashboard'>Dashboard</a>
-  <a mat-list-item routerLink='gallery'>Gallery</a>
-  <a mat-list-item>Login</a>
+  <a mat-list-item *ngIf="isLogged$ | async" [routerLink]="['/gallery']">Gallery</a>
 </mat-nav-list>
+
+<button (click)="goToLogin()" *ngIf="!(isLogged$ | async); else loggedUserInfo"
+        color="primary" mat-raised-button>Login
+</button>
+
+<ng-template #loggedUserInfo>
+  <div id="welcome">Welcome, {{ authenticationService.MOCKED_USERNAME }}</div>
+  <button (click)="authenticationService.logout()" mat-raised-button>Logout</button>
+</ng-template>
+
 
 <router-outlet></router-outlet>
 

@@ -11,14 +11,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PictureCardComponent } from './features/gallery/picture-card/picture-card.component';
 import { MaterialModule } from './shared/libraries/material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './features/gallery/dashboard/dashboard.component';
+import { LoginComponent } from './features/login/login/login.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     GalleryListComponent,
     PictureCardComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +31,7 @@ import { DashboardComponent } from './features/gallery/dashboard/dashboard.compo
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
+    ReactiveFormsModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
